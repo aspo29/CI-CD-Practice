@@ -22,7 +22,7 @@ const categories = [
 const features = [
   "Free shipping over $99",
   "1-year warranty on major products",
-  "24/7 customer support",
+  "24*7 customer support",
   "Secure payment checkout"
 ];
 
