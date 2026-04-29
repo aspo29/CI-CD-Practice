@@ -71,5 +71,5 @@ jobs:
 
             # Start or restart app on port 3000.
             pm2 delete myshop || true
-            pm2 start npm --name "myshop" -- start -- -p 3000
+            pm2 start npm --name "myshop" -- start -- -H 0.0.0.0 -p 3000
             pm2 save
