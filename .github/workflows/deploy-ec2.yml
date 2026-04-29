@@ -29,7 +29,8 @@ jobs:
             # Install system dependencies (Amazon Linux).
             if command -v dnf >/dev/null 2>&1; then
               sudo dnf -y update
-              sudo dnf -y install git curl
+              sudo dnf -y install git
+              sudo dnf -y install curl --allowerasing
             else
               sudo yum -y update
               sudo yum -y install git curl
