@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/CI-CD-Practice',
   images: {
     remotePatterns: [
       {
