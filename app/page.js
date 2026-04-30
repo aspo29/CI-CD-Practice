@@ -109,6 +109,40 @@ export default function HomePage() {
         ))}
       </section>
 
+      <section className="section cicd">
+        <h2>CI/CD Pipeline Status</h2>
+        <div className="cicdGrid">
+          <div className="cicdCard">
+            <h3>Build Status</h3>
+            <div className="statusIndicator success">
+              <span className="statusDot"></span>
+              Passing
+            </div>
+            <p>Last build: {new Date().toLocaleDateString()}</p>
+          </div>
+          <div className="cicdCard">
+            <h3>Test Coverage</h3>
+            <div className="coverageBar">
+              <div className="coverageFill" style={{width: '85%'}}></div>
+            </div>
+            <p>85% code coverage</p>
+          </div>
+          <div className="cicdCard">
+            <h3>Deployments</h3>
+            <div className="deploymentList">
+              <div className="deploymentItem">
+                <span>Production</span>
+                <span className="version">v1.0.0</span>
+              </div>
+              <div className="deploymentItem">
+                <span>Staging</span>
+                <span className="version">v1.0.1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer id="contact" className="footer">
         <h2>myshop</h2>
         <p>Email: support@myshop.com | Phone: +1 (800) 555-0199</p>
