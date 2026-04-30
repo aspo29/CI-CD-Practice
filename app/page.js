@@ -31,7 +31,7 @@ export default function HomePage() {
     <main>
       <header className="hero">
         <nav className="nav">
-          <div className="logo">myeshop</div>
+          <div className="logo">myshop</div>
           <div className="navLinks">
             <a href="#categories">Categories</a>
             <a href="#deals">Deals</a>
