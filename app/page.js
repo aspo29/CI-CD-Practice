@@ -31,7 +31,7 @@ export default function HomePage() {
     <main>
       <header className="hero">
         <nav className="nav">
-          <div className="logo">myshop</div>
+          <div className="logo">myeshop</div>
           <div className="navLinks">
             <a href="#categories">Categories</a>
             <a href="#deals">Deals</a>
@@ -44,7 +44,7 @@ export default function HomePage() {
             <p className="tag">#1 electronics destination</p>
             <h1>Upgrade your lifestyle with next-gen electronics</h1>
             <p>
-              Discover premium gadgets for work, gaming and home. Find top brands, exclusive offers and
+              Discover premium gadgets for work, gaming, accessories and home. Find top brands, exclusive offers and
               fast delivery at myshop.
             </p>
             <div className="heroCta">
@@ -85,7 +85,7 @@ export default function HomePage() {
         <div>
           <h2>Flash Deal of the Week</h2>
           <p>
-            Save up to 40% on selected gaming laptops, wireless earbuds and smart displays. Limited stock
+            Save up to 50% on selected gaming laptops, wireless earbuds and smart displays. Limited stock
             available.
           </p>
           <a href="#contact" className="btnPrimary">
