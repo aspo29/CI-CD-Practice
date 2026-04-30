@@ -26,6 +26,33 @@ const features = [
   "Secure payment checkout"
 ];
 
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "Tech Enthusiast",
+    text: "Amazing selection and fantastic prices! Received my laptop within 2 days.",
+    rating: 5
+  },
+  {
+    name: "Mike Chen",
+    role: "Photography Professional",
+    text: "The quality of products and customer service is outstanding. Highly recommend!",
+    rating: 5
+  },
+  {
+    name: "Emma Davis",
+    role: "Business Owner",
+    text: "Best place to buy electronics for my office. Great deals and reliable shipping.",
+    rating: 5
+  },
+  {
+    name: "James Wilson",
+    role: "Gamer",
+    text: "Found everything I needed for my gaming setup. Prices are unbeatable!",
+    rating: 5
+  }
+];
+
 export default function HomePage() {
   return (
     <main>
@@ -109,37 +136,23 @@ export default function HomePage() {
         ))}
       </section>
 
-      <section className="section cicd">
-        <h2>CI/CD Pipeline Status</h2>
-        <div className="cicdGrid">
-          <div className="cicdCard">
-            <h3>Build Status</h3>
-            <div className="statusIndicator success">
-              <span className="statusDot"></span>
-              Passing
-            </div>
-            <p>Last build: {new Date().toLocaleDateString()}</p>
-          </div>
-          <div className="cicdCard">
-            <h3>Test Coverage</h3>
-            <div className="coverageBar">
-              <div className="coverageFill" style={{width: '85%'}}></div>
-            </div>
-            <p>85% code coverage</p>
-          </div>
-          <div className="cicdCard">
-            <h3>Deployments</h3>
-            <div className="deploymentList">
-              <div className="deploymentItem">
-                <span>Production</span>
-                <span className="version">v1.0.0</span>
+      <section className="section testimonials">
+        <h2>What Our Customers Say</h2>
+        <div className="testimonialGrid">
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.name} className="testimonialCard">
+              <div className="rating">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <span key={i} className="star">★</span>
+                ))}
               </div>
-              <div className="deploymentItem">
-                <span>Staging</span>
-                <span className="version">v1.0.1</span>
+              <p className="testimonialText">"{testimonial.text}"</p>
+              <div className="testimonialAuthor">
+                <h4>{testimonial.name}</h4>
+                <p className="role">{testimonial.role}</p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 

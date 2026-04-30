@@ -181,7 +181,7 @@ h1 {
   color: #d7e4ff;
 }
 
-.cicd {
+.testimonials {
   background: rgba(17, 26, 47, 0.72);
   border: 1px solid rgba(130, 156, 209, 0.2);
   border-radius: 18px;
@@ -189,80 +189,56 @@ h1 {
   margin: 32px 0;
 }
 
-.cicdGrid {
+.testimonialGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
-.cicdCard {
+.testimonialCard {
   background: var(--panel);
   border: 1px solid rgba(130, 156, 209, 0.2);
   border-radius: 14px;
   padding: 20px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cicdCard h3 {
-  margin: 0 0 12px 0;
-  color: var(--text);
+.testimonialCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(79, 141, 255, 0.15);
+  border-color: rgba(130, 156, 209, 0.4);
+}
+
+.rating {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  color: #fbbf24;
   font-size: 1.2rem;
 }
 
-.statusIndicator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.statusIndicator.success {
-  color: #4ade80;
-}
-
-.statusDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: currentColor;
-}
-
-.coverageBar {
-  width: 100%;
-  height: 8px;
-  background: rgba(130, 156, 209, 0.2);
-  border-radius: 4px;
+.testimonialText {
+  color: var(--muted);
+  line-height: 1.6;
+  font-style: italic;
   margin: 8px 0;
-  overflow: hidden;
 }
 
-.coverageFill {
-  height: 100%;
-  background: linear-gradient(90deg, #4ade80, #22d3ee);
-  border-radius: 4px;
-  transition: width 0.3s ease;
+.testimonialAuthor h4 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
 }
 
-.deploymentList {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.deploymentItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 12px;
-  background: rgba(130, 156, 209, 0.1);
-  border-radius: 6px;
-}
-
-.version {
-  font-weight: 600;
+.testimonialAuthor .role {
   color: var(--brand);
+  margin: 4px 0 0 0;
+  font-size: 0.9rem;
 }
 
 .footer {
@@ -283,7 +259,7 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .cicdGrid {
+  .testimonialGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -306,7 +282,7 @@ h1 {
 
   .grid,
   .features,
-  .cicdGrid {
+  .testimonialGrid {
     grid-template-columns: 1fr;
   }
 }
